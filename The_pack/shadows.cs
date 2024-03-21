@@ -1,6 +1,6 @@
 /*
   By: whitedragon3257
-  Obs: This project is make for educative motives, i'm NOT responsabilize for damages caused in the peoples because use of thirds
+  Obs: READ THE LICENSE - This project is make for educative motives, i'm NOT responsabilize for damages caused in the peoples because use of thirds
   Description: This code is part of educative project about worms and anti-worms, using the criative and fun to learn about worm and anti-worms, using the analogy of magic and antidote.
 */
 using System;
