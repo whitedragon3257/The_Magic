@@ -19,4 +19,4 @@ I'm giving you a starting point, not the magic solution or elixir, good luck!
 
 Mr. White Dragon. ;)
 
-License Copyright © 2024, White Dragon Released under the License.
+License 2024, White Dragon Released under the CC0-1.0 License.
