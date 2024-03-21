@@ -1,4 +1,7 @@
-
+/*
+*  By: ,r. White Dragon (whitedragon3257) 
+*  This code is the antidote to stop the darknes_worm/shadows.cs/worm 
+*/
 using System;
 using System.IO;
 
